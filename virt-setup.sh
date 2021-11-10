@@ -12,7 +12,7 @@ sudo reflector -a 48 -c ${ISO} -f 5 -l 20 --sort rate --save /etc/pacman.d/mirro
 sudo pacman -Syy
 
 echo "-------------------------------------------------"
-echo "Installing packages                              "
+echo "Installing virtualization packages               "
 echo "-------------------------------------------------"
 PKGS=(
   'virt-manager'
@@ -20,6 +20,8 @@ PKGS=(
   'qemu-arch-extra'
   'edk2-ovmf'
   'virtualbox'
+  'virtualbox-guest-iso'
+  'virtualbox-ext-oracle'
   'docker'
   'docker-compose'
 )
@@ -34,6 +36,17 @@ echo "Adding user (${USER}) to neccessary groups       "
 echo "-------------------------------------------------"
 sudo usermod -aG libvirt ${USER}
 sudo usermod -aG docker ${USER}
+sudo usermod -aG vboxusers ${USER}
+
+echo "-------------------------------------------------"
+echo "Loading Virtualbox kernel modules                "
+echo "-------------------------------------------------"
+sudo modprobe vboxdrv vboxnetadp vboxnetflt
+
+echo "-------------------------------------------------"
+echo "Whitelisting Virtualbox with Wayland             "
+echo "-------------------------------------------------"
+gsettings set org.gnome.mutter.wayland xwayland-grab-access-rules "['VirtualBox Machine']"
 
 echo "-------------------------------------------------"
 echo "Starting services                                "
