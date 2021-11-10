@@ -7,9 +7,11 @@ A bash script for Arch Linux to install packages for virtualization and containe
 ## Steps
 1. Clone the git repo  
 ```git clone https://github.com/fsociety3765/arch-virt``` 
-2. Move into the repo  
+2. Move into the git repo and make all scripts executable  
 ```cd arch-virt/ && chmod +x *.sh```  
-3. Run `./virt-setup.sh`
+3. Run the `virt-setup.sh` script  
+```./virt-setup.sh```  
+4. Follow prompts until the setup is complete.
 
 ## NOTE
 During the installation of VirtualBox you will be asked to choose a package to provide host modules. This will depend on the kernel you're running.
