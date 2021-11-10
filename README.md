@@ -1,6 +1,16 @@
 # Arch-Virt
 A base script for Arch Linux to install all the neccessary packages for virtualization and containerization. 
 
+## Prerequisites
+1. Paru AUR Helper - https://aur.archlinux.org/packages/paru-bin
+
+## Steps
+1. Clone the git repo  
+```git clone https://github.com/fsociety3765/arch-virt``` 
+2. Move into the repo  
+```cd arch-virt/ && chmod +x *.sh```  
+3. Run `./virt-setup.sh`
+
 ## NOTE
 During the installation of VirtualBox you will be asked to choose a package to provide host modules. This will depend on the kernel you're running.
 - for the `linux` kernel, choose `virtualbox-host-modules-arch`
