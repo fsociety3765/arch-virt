@@ -28,7 +28,7 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
   echo "Installing: ${PKG}"
-  paru -S "$PKG" --noconfirm --needed
+  paru -S "$PKG" --needed
 done
 
 echo "-------------------------------------------------"
