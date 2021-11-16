@@ -38,6 +38,8 @@ for PKG in "${PKGS[@]}"; do
   paru -S "$PKG" --needed
 done
 
+snap install multipass
+
 echo "-------------------------------------------------"
 echo "Adding user (${USER}) to neccessary groups       "
 echo "-------------------------------------------------"
