@@ -18,6 +18,7 @@ PKGS=(
   'virt-manager'
   'qemu'
   'qemu-arch-extra'
+  'qemu-block-iscsi'
   'bridge-utils'
   'dnsmasq'
   'vde2'
