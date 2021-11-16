@@ -29,6 +29,7 @@ PKGS=(
   'virtualbox-ext-oracle'
   'docker'
   'docker-compose'
+  'gnome-boxes'
 )
 
 for PKG in "${PKGS[@]}"; do
