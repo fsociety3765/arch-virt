@@ -31,6 +31,7 @@ PKGS=(
   'docker'
   'docker-compose'
   'gnome-boxes'
+  'dmidecode'
 )
 
 for PKG in "${PKGS[@]}"; do
